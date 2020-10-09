@@ -1,0 +1,11 @@
+- name: <ADD_NAME ~@vardanelbakyan >
+  hosts: server
+  remote_user: root
+- name:
+  tasks:
+    yum:
+      name: httpd
+      state: latest
+    template:
+      src: /srv/httpd.j2
+      dest: /etc/httpd.conf
